@@ -8,10 +8,15 @@ window.onload = ()=>{
     let per = document.getElementById("per");
     async function getStatus(){
     let battMan = await navigator.getBattery();
+
     console.log(battMan);
+    
     per.innerHTML = Math.round((battMan.level * 100)) + "%";
     bar.style.width = (battMan.level * 100) + "%";
+
+    //Calling the color specifier function
     barColorChange();
+
     //Getting the Percentage
     battMan.addEventListener('levelchange',()=>{
         per.innerText = Math.round(battMan.level * 100) + "%";
