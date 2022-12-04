@@ -26,51 +26,51 @@ window.onload = ()=>{
 
     //Changing Bar Color
     function barColorChange(){
-    if ((battMan.level * 100) <= 100) {
+    if ((battMan.level * 100) > 75) {
         bar.style.background="linear-gradient(90deg, #e70404,#ff4500,#ffeb3b, #03a9f4, #00ff62)";
     }
-    if ((battMan.level * 100) < 75) {
+    else if ((battMan.level * 100) > 50) {
         bar.style.background="linear-gradient(90deg, #e70404,#ff4500,#ffeb3b, #03a9f4)";
     }
-    if ((battMan.level * 100) < 50) {
+    else if ((battMan.level * 100) > 30) {
         bar.style.background="linear-gradient(90deg, #e70404,#ff4500,#ffeb3b)";
     }
-    if ((battMan.level * 100) < 30) {
+    else if ((battMan.level * 100) > 15) {
         bar.style.background="linear-gradient(90deg, #e70404,#ff4500)";
     }
-    if((battMan.level * 100) <= 15){
+    else{
         bar.style.background="Red";
         document.getElementById("batCont").style.border="3px solid red";
     }
     }
 
-    //Checking for animation possibility
+    //Checking for animation possibility when device is plugged in
     battMan.addEventListener('chargingchange',()=>{
         if (battMan.charging) {
-            bar.setAttribute('class','class1');
+            bar.classList.add('move');
             detail.innerText="Charging...";
             barColorChange();
         }else{
-            bar.removeAttribute('class','class1');
+            bar.classList.remove('move');
             detail.innerText="Discharging";
             barColorChange();
         }
-        if (battMan.level===1&&battMan.charging) {
+        if (battMan.level === 1 && battMan.charging) {
             detail.innerHTML="Charged";
             barColorChange();
         }
     });
         if (battMan.charging) {
-            bar.setAttribute('class','class1');
+            bar.classList.add('move');
             detail.innerText="Charging...";
             barColorChange();
 
         }else{
-            bar.removeAttribute('class','class1');
+            bar.classList.remove('class1');
             detail.innerText="Discharging";
             barColorChange();
         }
-        if (battMan.level===1&&battMan.charging) {
+        if (battMan.level === 1 && battMan.charging) {
             detail.innerHTML="Charged";
             barColorChange();
         }
