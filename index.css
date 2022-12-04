@@ -51,16 +51,16 @@ body{
 }
 #detail{
     position: absolute;
-    top: 100%;
+    top: 120%;
     left: 50%;
-    transform: translate(-50%,0%);
+    transform: translateX(-50%);
     font-family: sans-serif;
     font-size: 1rem;
     color: white;
     font-style: italic;
     font-weight: 800;
 }
-.class1{
+.move{
     -moz-transition: width 2s;
     -webkit-transition: width 2s;
     transition: width 2s;
@@ -71,7 +71,7 @@ body{
 @keyframes move {
     to{width: 100%;}
 }
-#batCont #per{
+#per{
     position: absolute;
     top: 50%;
     left: 50%;
