@@ -60,21 +60,24 @@ window.onload = ()=>{
             barColorChange();
         }
     });
-        if (battMan.charging) {
-            bar.classList.add('move');
-            detail.innerText="Charging...";
-            barColorChange();
 
-        }else{
-            bar.classList.remove('class1');
-            detail.innerText="Discharging";
-            barColorChange();
-        }
-        if (battMan.level === 1 && battMan.charging) {
-            detail.innerHTML="Charged";
-            barColorChange();
-        }
-    //Checking for animation ends
+    /*
+    if (battMan.charging) {
+        bar.setAttribute('class','class1');
+        detail.innerText="Charging...";
+        barColorChange();
 
+    }else{
+        bar.removeAttribute('class','class1');
+        detail.innerText="Discharging";
+        barColorChange();
+    }
+    if (battMan.level===1&&battMan.charging) {
+        detail.innerHTML="Charged";
+        barColorChange();
+    }
+    */
+   
+   //Checking for animation ends
     }
 }
