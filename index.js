@@ -63,16 +63,16 @@ window.onload = ()=>{
 
     
     if (battMan.charging) {
-        bar.setAttribute('class','class1');
+        bar.classList.add('move');
         detail.innerText="Charging...";
         barColorChange();
 
     }else{
-        bar.removeAttribute('class','class1');
+        bar.classList.remove('move');
         detail.innerText="Discharging";
         barColorChange();
     }
-    if (battMan.level===1&&battMan.charging) {
+    if (battMan.level=== 1&& battMan.charging) {
         detail.innerHTML="Charged";
         barColorChange();
     }
