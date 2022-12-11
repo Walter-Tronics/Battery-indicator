@@ -45,7 +45,7 @@ window.onload = ()=>{
     }
 
     //Checking for animation possibility when device is plugged in
-    //battMan.addEventListener('chargingchange',()=>{
+    battMan.addEventListener('chargingchange',()=>{
         if (battMan.charging) {
             bar.classList.add('move');
             detail.innerText="Charging...";
@@ -59,9 +59,9 @@ window.onload = ()=>{
             detail.innerHTML="Charged";
             barColorChange();
         }
-    //});
+    });
 
-    /*
+    
     if (battMan.charging) {
         bar.setAttribute('class','class1');
         detail.innerText="Charging...";
@@ -76,7 +76,7 @@ window.onload = ()=>{
         detail.innerHTML="Charged";
         barColorChange();
     }
-    */
+    
    
    //Checking for animation ends
     }
