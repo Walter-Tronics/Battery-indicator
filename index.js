@@ -72,7 +72,7 @@ window.onload = ()=>{
         detail.innerText="Discharging";
         barColorChange();
     }
-    if (battMan.level=== 1&& battMan.charging) {
+    if (battMan.level === 1 && battMan.charging) {
         detail.innerHTML="Charged";
         barColorChange();
     }
